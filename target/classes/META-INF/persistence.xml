@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="health_db" transaction-type="RESOURCE_LOCAL">
+
+    <class>com.db.hibernate.domain.CareProvider</class>
+    <class>com.db.hibernate.domain.Patient</class>
+    <class>com.db.hibernate.domain.HealthService</class>
+    <class>com.db.hibernate.domain.HealthIssue</class>
+    <class>com.db.hibernate.domain.MedicalEncounter</class>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+      <property name="javax.persistence.jdbc.url"
+                value="jdbc:h2:C:\Users\AnaGeorgia\Desktop\health_db;create=true" />
+      <property name="javax.persistence.jdbc.user" value="test" />
+      <property name="javax.persistence.jdbc.password" value="test" />
+
+      <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" />
+      <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+      <property name="show_sql" value="true" />
+    </properties>
+  </persistence-unit>
+</persistence>
